@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/adaccounts",
+      "handler": "Adaccount.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/adaccounts/count",
+      "handler": "Adaccount.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/adaccounts/:id",
+      "handler": "Adaccount.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/adaccounts",
+      "handler": "Adaccount.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/adaccounts/:id",
+      "handler": "Adaccount.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/adaccounts/:id",
+      "handler": "Adaccount.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "tw_config",
+  "info": {
+    "name": "twconfig",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "api_key": {
+      "type": "text"
+    },
+    "api_secret_key": {
+      "type": "text"
+    },
+    "access_token": {
+      "type": "text"
+    },
+    "access_secret_token": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "searches": {
+      "collection": "twsearch",
+      "via": "config"
+    }
+  }
+}

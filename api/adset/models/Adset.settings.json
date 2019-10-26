@@ -1,0 +1,101 @@
+{
+  "connection": "default",
+  "collectionName": "publish_adset",
+  "info": {
+    "name": "adset",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "billing_event": {
+      "enum": [
+        "APP_INSTALLS",
+        "CLICKS",
+        "IMPRESSIONS",
+        "LINK_CLICKS",
+        "OFFER_CLAIMS",
+        "PAGE_LIKES",
+        "POST_ENGAGEMENT",
+        "VIDEO_VIEWS",
+        "THRUPLAY"
+      ],
+      "type": "enumeration",
+      "enumDefault": "PAGE_LIKES"
+    },
+    "optimization_goal": {
+      "enum": [
+        "NONE",
+        "APP_INSTALLS",
+        "BRAND_AWARENESS",
+        "AD_RECALL_LIFT",
+        "CLICKS",
+        "ENGAGED_USERS",
+        "EVENT_RESPONSES",
+        "IMPRESSIONS",
+        "LEAD_GENERATION",
+        "LINK_CLICKS",
+        "OFFER_CLAIMS",
+        "OFFSITE_CONVERSIONS",
+        "PAGE_ENGAGEMENT",
+        "PAGE_LIKES",
+        "POST_ENGAGEMENT",
+        "REACH",
+        "SOCIAL_IMPRESSIONS",
+        "VIDEO_VIEWS",
+        "APP_DOWNLOADS",
+        "TWO_SECOND_CONTINUOUS_VIDEO_VIEWS",
+        "LANDING_PAGE_VIEWS",
+        "VALUE",
+        "THRUPLAY",
+        "REPLIES",
+        "DERIVED_EVENTS"
+      ],
+      "type": "enumeration"
+    },
+    "start_time": {
+      "type": "date"
+    },
+    "end_time": {
+      "type": "date"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "status": {
+      "enumDefault": "PAUSED",
+      "enum": [
+        "ACTIVE",
+        "PAUSED"
+      ],
+      "type": "enumeration"
+    },
+    "adset_facebook_id": {
+      "type": "string"
+    },
+    "campaign": {
+      "model": "campaign",
+      "via": "adsets"
+    },
+    "targeting": {
+      "type": "text"
+    },
+    "promoted_object": {
+      "type": "text"
+    },
+    "ads": {
+      "collection": "ad",
+      "via": "adset"
+    }
+  }
+}

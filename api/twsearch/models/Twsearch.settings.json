@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "tw_search",
+  "info": {
+    "name": "twsearch",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "type": {
+      "enum": [
+        "aroba",
+        "term",
+        "hashtag"
+      ],
+      "type": "enumeration"
+    },
+    "term": {
+      "type": "string"
+    },
+    "active": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "config": {
+      "model": "twconfig",
+      "via": "searches"
+    }
+  }
+}

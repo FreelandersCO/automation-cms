@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/twconfigs",
+      "handler": "Twconfig.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/twconfigs/count",
+      "handler": "Twconfig.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/twconfigs/:id",
+      "handler": "Twconfig.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/twconfigs",
+      "handler": "Twconfig.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/twconfigs/:id",
+      "handler": "Twconfig.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/twconfigs/:id",
+      "handler": "Twconfig.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

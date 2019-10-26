@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/twsearches",
+      "handler": "Twsearch.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/twsearches/count",
+      "handler": "Twsearch.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/twsearches/:id",
+      "handler": "Twsearch.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/twsearches",
+      "handler": "Twsearch.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/twsearches/:id",
+      "handler": "Twsearch.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/twsearches/:id",
+      "handler": "Twsearch.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

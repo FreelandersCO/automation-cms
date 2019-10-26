@@ -1,0 +1,95 @@
+{
+  "connection": "default",
+  "collectionName": "publish_campaign",
+  "info": {
+    "name": "campaign",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "adaccount": {
+      "model": "adaccount",
+      "via": "campaigns"
+    },
+    "bid_strategy": {
+      "required": true,
+      "enum": [
+        "LOWEST_COST_WITHOUT_CAP",
+        "LOWEST_COST_WITH_BID_CAP",
+        "TARGET_COST"
+      ],
+      "type": "enumeration",
+      "enumDefault": "TARGET_COST"
+    },
+    "buying_type": {
+      "enum": [
+        "AUCTION",
+        "RESERVED"
+      ],
+      "type": "enumeration",
+      "required": true
+    },
+    "name": {
+      "required": true,
+      "type": "string",
+      "default": ""
+    },
+    "objective": {
+      "enum": [
+        "APP_INSTALLS",
+        "BRAND_AWARENESS",
+        "CONVERSIONS",
+        "EVENT_RESPONSES",
+        "LEAD_GENERATION",
+        "LINK_CLICKS",
+        "LOCAL_AWARENESS",
+        "MESSAGES",
+        "OFFER_CLAIMS",
+        "PAGE_LIKES",
+        "POST_ENGAGEMENT",
+        "PRODUCT_CATALOG_SALES",
+        "REACH",
+        "VIDEO_VIEWS"
+      ],
+      "type": "enumeration",
+      "enumDefault": "REACH",
+      "required": true
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "PAUSED",
+        "DELETED",
+        "ARCHIVED"
+      ],
+      "type": "enumeration",
+      "required": true,
+      "enumDefault": "PAUSED"
+    },
+    "token": {
+      "model": "token",
+      "via": "campaigns"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "daily_budget": {
+      "type": "biginteger",
+      "default": ""
+    },
+    "facebook_id": {
+      "type": "string"
+    },
+    "adsets": {
+      "collection": "adset",
+      "via": "campaign"
+    }
+  }
+}

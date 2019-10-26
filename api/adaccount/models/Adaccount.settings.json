@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "publish_ad_account",
+  "info": {
+    "name": "adaccount",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "account_id": {
+      "type": "string"
+    },
+    "account_name": {
+      "type": "string"
+    },
+    "campaigns": {
+      "collection": "campaign",
+      "via": "adaccount"
+    }
+  }
+}

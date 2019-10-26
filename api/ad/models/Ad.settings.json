@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "fb_publish_ad",
+  "info": {
+    "name": "ad",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "adset": {
+      "model": "adset",
+      "via": "ads"
+    },
+    "creative_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PAUSED",
+        "ACTIVED"
+      ],
+      "type": "enumeration"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "ad_facebook_id": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "publish_token",
+  "info": {
+    "name": "token",
+    "description": "Token generate in Facebook"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "app_id": {
+      "required": true,
+      "type": "string"
+    },
+    "app_secret": {
+      "required": true,
+      "type": "string"
+    },
+    "app_token": {
+      "type": "text"
+    },
+    "app_name": {
+      "type": "string"
+    },
+    "campaigns": {
+      "collection": "campaign",
+      "via": "token"
+    }
+  }
+}
