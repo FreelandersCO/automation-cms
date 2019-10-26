@@ -72,7 +72,7 @@ module.exports = {
                     });
                 }
             });
-        }, 100);
+        }, 1000);
     },
 
     // Before updating a value.

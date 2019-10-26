@@ -75,9 +75,8 @@ module.exports = {
             } else {
                 console.error('Error');
             }
-
             //
-        }, 100);
+        }, 1000);
     },
 
     // Before updating a value.
