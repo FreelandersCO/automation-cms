@@ -6,8 +6,8 @@
       "settings": {
         "client": "postgres",
         "database": "automation",
-        "host": "127.0.0.1",
-        "port": "5434",
+        "host": "pgl-app",
+        "port": "5432",
         "username": "postgres",
         "password": "1nt3r4ct1v3"
       },
