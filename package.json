@@ -9,9 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "dependencies": {
     "fb": "^2.0.0",
     "knex": "latest",
